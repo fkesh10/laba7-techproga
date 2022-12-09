@@ -11,15 +11,15 @@ for (var i = 0; i < foldBtns.length; i++){
             e.target.className = "fold-button folded";
             var displayState = "none";
         }
-        Event.target
+        event.target
             .parentElement
             .getElementsByClassName('article-author')[0]
             .style.display = displayState;
-        Event.target
+        event.target
             .parentElement
             .getElementsByClassName('article-created-date')[0]
             .style.display = displayState;
-        Event.target
+        event.target
             .parentElement
             .getElementsByClassName('article-text')[0]
             .style.display = displayState;
