@@ -10,11 +10,11 @@ from django.contrib.auth import authenticate, login, logout
 def archive(request):
     return render(request, 'archive.html', {"posts": Article.objects.all()})
 
-def javascript_workspace(request):
-    return render(request, 'testing_js.html')
-
 # def javascript_workspace(request):
-#     return render(request, 'test_js.html')
+#     return render(request, 'testing_js.html')
+
+def javascript_workspace(request):
+    return render(request, 'test_js.html')
 
 def get_article(request, article_id):
     try:
