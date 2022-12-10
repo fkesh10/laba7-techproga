@@ -61,7 +61,7 @@ def register_user(request):
                     'email': request.POST["email"],
                     'password': request.POST["password"],
                 }
-                if form["username"] == '' or form["email"] == ''  or form["password"] == '' :
+                if form["username"] or form["email"] or form["password"] :
                     form['errors'] = u"вы отправили пустую строку в одно из полей"
                     return render(request, 'register.html', {'form': form})
 
@@ -70,8 +70,7 @@ def register_user(request):
 
                 if len(if_username_unique) == 0 and len(if_email_unique) == 0:
                     article = User.objects.create_user(form["username"], form["email"], form["password"])
-                    # form['errors'] = u"Вы зарегистрированы! Теперь войдите в систему"
-                    # return render(request, 'login.html', {'form': form})
+                   
                     return redirect('login_user')
                 else:
                     form['errors'] = u"Не уникальный юзернейм/почта"

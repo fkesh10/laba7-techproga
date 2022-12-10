@@ -1,4 +1,4 @@
-alert( 'Hello, world!' );
+alert('Hello, world!');
 
 var groupmates = [
     {
@@ -48,17 +48,17 @@ var groupmates = [
 console.log(groupmates)
 
 
-var rpad = function(source, length) {
+var rpad = function (source, length) {
     // js не поддерживает добавление нужного количества символов
     // справа от строки, т.е. аналога ljust из Python здесь нет 
     // str = (str).toString();
     source = String(source);
     while (source.length < length)
-        source = source + ' '; 
+        source = source + ' ';
     return source;
 };
 
-var printStudents = function(students){ 
+var printStudents = function (students) {
     console.log(
         rpad("Имя", 15),
         rpad("Фамилия", 15),
@@ -66,7 +66,7 @@ var printStudents = function(students){
         rpad("Оценки", 20)
     );
     // был выведен заголовок таблицы
-    for (var i = 0; i<=students.length-1; i++){
+    for (var i = 0; i <= students.length - 1; i++) {
         // в цикле выводится каждый экземпляр студента 
         console.log(
             rpad(students[i]['name'], 15),
@@ -78,12 +78,12 @@ var printStudents = function(students){
     console.log('\n'); // добавляется пустая строка в конце вывода
 };
 
-var filterByGroup = function() {
+var filterByGroup = function () {
     var group = prompt();
     var result = [];
-    for (var i = 0; i <= groupmates.length-1 ; i++){
-         var student = groupmates[i];
-        if (student["group"] == group){
+    for (var i = 0; i <= groupmates.length - 1; i++) {
+        var student = groupmates[i];
+        if (student["group"] == group) {
             result.push(student);
         }
     }

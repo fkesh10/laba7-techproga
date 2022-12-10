@@ -22,8 +22,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("register/", views.register_user),
     path("login/", views.login_user),
-    path("test_js/", views.javascript_workspace),
-    # path("my_js/", views.javascript_workspace),
+    path("my_js/", views.javascript_workspace),
   
     path("archive/", views.archive),
     path("articles/new/", views.create_post),
